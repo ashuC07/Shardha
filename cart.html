@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cart | Sharda Musical</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-flex">
+    <div class="logo"><img src="assets/logo.png"></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+    </nav>
+    <div class="nav-icons">
+  <span class="cart-icon">
+    🛒
+    <span id="cartCount" class="cart-badge">0</span>
+  </span>
+</div>
+
+  </div>
+</header>
+
+
+<section class="container cart-page">
+  <h1>Your Cart</h1>
+
+  <div id="cartItems"></div>
+
+<div class="cart-summary">
+  <div class="total-box">
+    <span class="total-label">Total Amount</span>
+    <span class="total-amount">₹<span id="cartTotal">0</span></span>
+  </div>
+
+  <button class="checkout-btn">Proceed to Checkout</button>
+</div>
+
+</section>
+
+<script src="cart.js"></script>
+<!-- CHECKOUT POPUP -->
+<div id="checkoutModal" class="modal">
+  <div class="modal-box">
+
+    <h2>Checkout Details</h2>
+
+    <form id="checkoutForm">
+      <input required id="name" placeholder="Full Name">
+      <input required id="email" placeholder="Email">
+      <input required id="phone" placeholder="Phone">
+      <textarea required id="address" placeholder="Full Address"></textarea>
+
+      <button type="submit" class="pay-btn">
+        Proceed to Payment
+      </button>
+    </form>
+
+    <span id="closeModal">✕</span>
+  </div>
+</div>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+</body>
+</html>

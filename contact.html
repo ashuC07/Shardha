@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us | Sharda Musical</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR (SAME AS OTHER PAGES) -->
+<header class="navbar">
+  <div class="container nav-flex">
+    <div class="logo"><img src="assets/logo.png" alt="Sharda Musical Logo"></div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="nav-icons">
+        <span class="cart-icon">
+          🛒
+          <span id="cartCount" class="cart-badge">0</span>
+        </span>
+      </div>
+  </div>
+</header>
+
+<!-- CONTACT -->
+<section class="contact container">
+
+  <div class="contact-grid">
+
+    <!-- FORM -->
+    <div class="contact-form">
+      <h1>CONTACT US</h1>
+      <p class="sub">We're Here To Help – Get In Touch</p>
+
+      <form id="contactForm">
+        <label>Your Name *</label>
+        <input type="text" required placeholder="Enter your full name">
+
+        <label>Email Address *</label>
+        <input type="email" required placeholder="Enter your email address">
+
+        <label>Phone Number</label>
+        <input type="tel" placeholder="Enter your phone number">
+
+        <label>Subject *</label>
+        <input type="text" required placeholder="What is this regarding?">
+
+        <label>Message</label>
+        <textarea placeholder="Tell us how we can help you..."></textarea>
+
+        <label class="checkbox">
+          <input type="checkbox" required>
+          I accept the Terms
+        </label>
+
+        <button type="submit" class="btn primary">SEND MESSAGE</button>
+
+        <small>We'll respond within 24 hours</small>
+      </form>
+    </div>
+
+    <!-- MAP -->
+    <div class="contact-map">
+      <iframe 
+        src="https://www.google.com/maps?q=Sharda%20Musical%20Kalamandir%20Nanded&output=embed"
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+<!-- INFO STRIP -->
+<section class="contact-info">
+  <div class="container info-grid">
+
+    <div>
+      <h4>Email Us</h4>
+      <p>Response Time: Within 24 hours</p>
+      <a href="mailto:info@shardamusical.com">info@shardamusical.com</a>
+    </div>
+
+    <div>
+      <h4>Call Us</h4>
+      <p>Mon–Sat: 10:00 AM – 8:00 PM</p>
+      <p>+91 (XXX) XXXX-XXXX</p>
+    </div>
+
+    <div>
+      <h4>Our Store</h4>
+      <p>Sharda Musical Kalamandir</p>
+      <p>Nanded, Maharashtra</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER (same as home) -->
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <div class="footer-brand">
+      <img src="assets/logo-yellow.png" alt="">
+      <p>
+        Crafting authentic instruments for over 40 years —
+        where tradition meets premium sound.
+      </p>
+
+      <div class="socials">
+        <span>◯</span><span>◯</span><span>◯</span><span>◯</span>
+      </div>
+    </div>
+
+    <div>
+      <h5>About</h5>
+      <a>All Products</a>
+      <a>Best Sellers</a>
+      <a>New Arrivals</a>
+      <a>Sale Items</a>
+      <a>Gift Cards</a>
+    </div>
+
+    <div>
+      <h5>Information</h5>
+      <a>About Us</a>
+      <a>Shipping & Returns</a>
+      <a>Privacy Policy</a>
+      <a>Terms & Conditions</a>
+    </div>
+
+    <div>
+      <h5>Support</h5>
+      <a>FAQ</a>
+      <a>Track Order</a>
+      <a>Contact Support</a>
+      <a>Blog & Resources</a>
+    </div>
+
+    <div>
+      <h5>Contact</h5>
+      <p>+91 (XXX) XXXX-XXXX</p>
+      <p>info@shardamusical.com</p>
+      <p>Jalgaon, Maharashtra</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Sharda Musical Kalamandir. All Rights Reserved.</p>
+    <div>
+      <a>Privacy Policy</a>
+      <a>Terms of Service</a>
+      <a>Cookies</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+<script src="contact.js"></script>
+<script>
+// Hamburger menu toggle
+const hamburger = document.getElementById('hamburgerBtn');
+const nav = document.getElementById('mainNav');
+hamburger.addEventListener('click', function() {
+  hamburger.classList.toggle('open');
+  nav.classList.toggle('open');
+});
+</script>
+</body>
+</html>

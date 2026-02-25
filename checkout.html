@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Checkout</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+/* simple clean form */
+.checkout-container{
+  max-width:500px;
+  margin:80px auto;
+  padding:40px;
+  border-radius:20px;
+  background:#fff;
+  box-shadow:0 20px 40px rgba(0,0,0,0.08);
+}
+
+.checkout-container h2{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.checkout-container input{
+  width:100%;
+  padding:14px;
+  margin-bottom:16px;
+  border-radius:10px;
+  border:1px solid #ddd;
+}
+
+.checkout-container button{
+  width:100%;
+  padding:16px;
+  border:none;
+  border-radius:30px;
+  background:#111;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="checkout-container">
+  <h2>Checkout Details</h2>
+
+  <form id="checkoutForm">
+    <input id="name" required placeholder="Full Name">
+    <input id="email" required placeholder="Email">
+    <input id="phone" required placeholder="Phone">
+    <input id="address" required placeholder="Address">
+
+    <button type="submit">Proceed to Payment</button>
+  </form>
+</div>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="payment.js"></script>
+
+</body>
+</html>

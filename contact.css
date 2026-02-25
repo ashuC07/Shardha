@@ -1,0 +1,103 @@
+.contact {
+  padding: 100px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.contact-form h1 {
+  font-family: 'Playfair Display', serif;
+}
+
+.contact-form .sub {
+  margin-bottom: 30px;
+  opacity: 0.7;
+}
+
+.contact-form label {
+  display: block;
+  margin: 16px 0 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.contact-form textarea {
+  height: 120px;
+}
+
+.checkbox {
+  margin: 20px 0;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  border: none;
+  border-radius: 16px;
+}
+
+/* INFO STRIP */
+.contact-info {
+  background: #fff6e8;
+  padding: 60px 0;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-grid,
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-map iframe {
+    min-height: 300px;
+  }
+}
+
+
+/* Cart  */
+
+.cart-icon {
+  position: relative;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: #f4c430;
+  color: #111;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 50%;
+  min-width: 18px;
+  text-align: center;
+}
+
+.cart-badge {
+  transition: transform 0.2s ease;
+}
+
+.cart-badge.bump {
+  transform: scale(1.2);
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product | Sharda Musical</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="product.css">
+</head>
+<body>
+
+<!-- NAVBAR (reuse your existing navbar) -->
+
+<section class="pdp container">
+
+  <div class="pdp-grid">
+
+    <!-- LEFT -->
+    <div class="pdp-images">
+      <img id="mainImage" class="main-img">
+      <div class="thumbs" id="thumbs"></div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="pdp-info">
+      <h1 id="productName"></h1>
+
+      <div class="rating">
+        ⭐⭐⭐⭐⭐ <span id="ratingText"></span>
+      </div>
+
+      <div class="price">
+        ₹<span id="price"></span>
+        <del>₹<span id="oldPrice"></span></del>
+      </div>
+
+      <p id="description"></p>
+
+      <div class="options">
+        <strong>Color</strong>
+        <div id="colors"></div>
+
+        <strong>Size</strong>
+        <select id="sizes"></select>
+      </div>
+
+      <div class="cart-row">
+        <button class="btn outline">−</button>
+        <span>1</span>
+        <button class="btn outline">+</button>
+        <button class="btn primary">Add to Cart</button>
+      </div>
+
+      <button class="buy-now">Buy Now</button>
+
+      <p class="shipping">Free shipping over ₹5,000</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- RELATED PRODUCTS -->
+<section class="section">
+  <h2>Related Products</h2>
+  <div class="product-grid container" id="related"></div>
+</section>
+
+<!-- FOOTER (reuse your footer) -->
+
+<script src="data.js"></script>
+<script src="product.js"></script>
+
+<!-- Razorpay Pay Button -->
+<button id="payBtn" style="padding:10px 20px;font-size:16px;">Pay Now</button>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="payment.js"></script>
+
+</body>
+</html>

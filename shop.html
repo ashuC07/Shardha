@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Shop | Sharda Musical</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="shop.css" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="container nav-flex">
+      <div class="logo"><img src="assets/logo.png" alt="Sharda Musical Logo"></div>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-icons">
+        <span class="cart-icon">
+          🛒
+          <span id="cartCount" class="cart-badge">0</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="shop-hero" style="background-image:url('assets/h.png')">
+    <h1>Shop Our Collection</h1>
+    <p>Browse Premium Musical Instruments</p>
+  </section>
+
+
+  <!-- SHOP -->
+  <section class="shop container">
+
+    <!-- FILTERS -->
+    <aside class="filters">
+      <h3>Filters</h3>
+
+      <div class="filter-group">
+        <label>Max Price: ₹<span id="priceVal">20000</span></label>
+        <input type="range" min="1000" max="20000" value="20000" id="priceRange">
+      </div>
+
+      <div class="filter-group">
+        <label>Instrument Type</label>
+        <label><input type="checkbox" value="string" checked> String</label>
+        <label><input type="checkbox" value="percussion" checked> Percussion</label>
+      </div>
+    </aside>
+
+    <!-- PRODUCTS -->
+    <div class="products">
+      <div class="shop-top">
+        <span id="count"></span>
+        <select id="sort">
+          <option value="default">Sort by</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+        </select>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+
+      <button id="loadMore" class="load-btn">Load More</button>
+
+    </div>
+
+  </section>
+  <!-- FOOTER (same as home) -->
+  <footer class="footer">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <img src="assets/logo-yellow.png" alt="">
+        <p>
+          Crafting authentic instruments for over 40 years —
+          where tradition meets premium sound.
+        </p>
+
+        <div class="socials">
+          <span>◯</span><span>◯</span><span>◯</span><span>◯</span>
+        </div>
+      </div>
+
+      <div>
+        <h5>About</h5>
+        <a>All Products</a>
+        <a>Best Sellers</a>
+        <a>New Arrivals</a>
+        <a>Sale Items</a>
+        <a>Gift Cards</a>
+      </div>
+
+      <div>
+        <h5>Information</h5>
+        <a>About Us</a>
+        <a>Shipping & Returns</a>
+        <a>Privacy Policy</a>
+        <a>Terms & Conditions</a>
+      </div>
+
+      <div>
+        <h5>Support</h5>
+        <a>FAQ</a>
+        <a>Track Order</a>
+        <a>Contact Support</a>
+        <a>Blog & Resources</a>
+      </div>
+
+      <div>
+        <h5>Contact</h5>
+        <p>+91 (XXX) XXXX-XXXX</p>
+        <p>info@shardamusical.com</p>
+        <p>Jalgaon, Maharashtra</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Sharda Musical Kalamandir. All Rights Reserved.</p>
+      <div>
+        <a>Privacy Policy</a>
+        <a>Terms of Service</a>
+        <a>Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Razorpay Pay Button -->
+  <button id="payBtn" style="padding:10px 20px;font-size:16px;">Pay Now</button>
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="payment.js"></script>
+
+</body>
+<script src="shop.js"></script>
+<script>
+
+
+  // Hamburger menu toggle
+  const hamburger = document.getElementById('hamburgerBtn');
+  const nav = document.getElementById('mainNav');
+  hamburger.addEventListener('click', function () {
+    hamburger.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+</script>
+
+<!-- Razorpay Pay Button -->
+<button id="payBtn" style="padding:10px 20px;font-size:16px;">Pay Now</button>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="payment.js"></script>
+<div id="toast" class="toast">Added to cart</div>
+
+</body>
+
+</html>
