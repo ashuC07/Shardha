@@ -1,16 +1,16 @@
 const products = [
-  { name: "Professional Sitar", price: 12000, type: "string", img: "assets/g.png" },
-  { name: "Premium Guitar", price: 17000, type: "string", img: "assets/g1.png" },
-  { name: "Concert Tabla", price: 15000, type: "percussion", img: "assets/t.png" },
-  { name: "Beginner Sitar", price: 10000, type: "string", img: "assets/15.png" },
-  { name: "Advanced Tabla", price: 18000, type: "percussion", img: "assets/t.png" },
-  { name: "Classic Sitar", price: 13000, type: "string", img: "assets/17.png" },
-  { name: "Copper Tabla", price: 18500, type: "string", img: "assets/copper_tabla.jpg" },
-  { name: "Brass Tabla set", price: 16500, type: "string", img: "assets/Brass_tabla.jpg" },
-  { name: "Steel Tabla Set", price: 6500, type: "percussion", img: "assets/Steel_tabla.jpg" },
-  { name: "Folding Harmonium", price: 19500, type: "string", img: "assets/folding_harmonium.jpg" },
-  { name: "Guitar", price: 6500, type: "percussion", img: "assets/guitar.jpg" },
-  { name: "Stranger Box", price: 13000, type: "string", img: "assets/stranger_box.webp" }
+  { name: "Professional Sitar", price: 12000, type: "string", img: "g.png" },
+  { name: "Premium Guitar", price: 17000, type: "string", img: "g1.png" },
+  { name: "Concert Tabla", price: 15000, type: "percussion", img: "t.png" },
+  { name: "Beginner Sitar", price: 10000, type: "string", img: "15.png" },
+  { name: "Advanced Tabla", price: 18000, type: "percussion", img: "t.png" },
+  { name: "Classic Sitar", price: 13000, type: "string", img: "17.png" },
+  { name: "Copper Tabla", price: 18500, type: "string", img: "copper_tabla.jpg" },
+  { name: "Brass Tabla set", price: 16500, type: "string", img: "Brass_tabla.jpg" },
+  { name: "Steel Tabla Set", price: 6500, type: "percussion", img: "Steel_tabla.jpg" },
+  { name: "Folding Harmonium", price: 19500, type: "string", img: "folding_harmonium.jpg" },
+  { name: "Guitar", price: 6500, type: "percussion", img: "guitar.jpg" },
+  { name: "Stranger Box", price: 13000, type: "string", img: "stranger_box.webp" }
 ];
 
 let visible = 6;
@@ -154,3 +154,4 @@ updateCartCount();
 document.querySelector(".cart-icon").onclick = () => {
   window.location.href = "cart.html";
 };
+
