@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login | Sharda Musical</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .login-container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-align: left;
+        }
+
+        .login-form label {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .error-msg {
+            color: #ff4d4f;
+            font-size: 14px;
+            margin-top: -10px;
+            display: none;
+        }
+
+        .login-btn {
+            margin-top: 10px;
+            padding: 12px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #f8f9fa;">
+
+    <header class="navbar">
+        <div class="container nav-flex">
+            <div class="logo"><img src="assets/logo.png" alt="Sharda Musical Logo"></div>
+            <nav id="mainNav">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About Us</a>
+                <a href="admin.html" class="active">Admin Panel</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="login-container">
+            <h2>Admin Login</h2>
+            <form id="adminLoginForm" class="login-form">
+                <div>
+                    <label>Username</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <p id="errorMsg" class="error-msg">Invalid username or password.</p>
+                <button type="submit" class="btn primary login-btn">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="admin-login.js"></script>
+</body>
+
+</html>

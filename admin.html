@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel | Sharda Musical</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container nav-flex">
+            <div class="logo"><img src="assets/logo.png" alt="Sharda Musical Logo"></div>
+            <nav id="mainNav">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About Us</a>
+                <a href="admin.html" class="active">Admin Panel</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="admin-dashboard container">
+        <h2>Product Management</h2>
+
+        <div class="admin-actions">
+            <button class="btn primary" id="addProductBtn">Add New Product</button>
+            <button class="btn outline" id="resetProductsBtn">Reset to Default</button>
+            <button class="btn outline" id="logoutBtn"
+                style="margin-left: auto; border-color: #ff4d4f; color: #ff4d4f;">Logout</button>
+        </div>
+
+        <div class="table-container">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Price (₹)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="productTableBody">
+                    <!-- Products injected via JS -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h3 id="modalTitle">Add Product</h3>
+            <form id="productForm">
+                <input type="hidden" id="editIndex">
+
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input type="text" id="prodName" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Type:</label>
+                    <select id="prodType" required>
+                        <option value="string">String</option>
+                        <option value="percussion">Percussion</option>
+                        <option value="wind">Wind</option>
+                        <option value="keyboard">Keyboard</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Price (₹):</label>
+                    <input type="number" id="prodPrice" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Upload Image:</label>
+                    <input type="file" id="prodImgFile" accept="image/*">
+                    <p style="font-size: 12px; color: #666; margin-top: 5px;">Leave empty to keep current image. Base64
+                        strings will be saved.</p>
+                    <input type="hidden" id="prodImg" value="assets/logo.png">
+                </div>
+
+                <button type="submit" class="btn primary full-width">Save Product</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>
